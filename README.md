@@ -387,10 +387,10 @@ def hash_menu():
         hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
         st.write("Hashed Password:", hashed.decode('utf-8'))
 # Load Twilio credentials from environment variables (to keep them secure)
-ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID', 'ACbe4119412018e465027352fb8f0d0c66')
-AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN', '81a63b0432ff2a778f68285c68709b64')
-TWILIO_PHONE_NUMBER = os.getenv('TWILIO_PHONE_NUMBER', '+13513000344')
-HR_PHONE_NUMBER = os.getenv('HR_PHONE_NUMBER', '+917200276542')
+ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
+AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
+TWILIO_PHONE_NUMBER = os.getenv('TWILIO_PHONE_NUMBER')
+HR_PHONE_NUMBER = os.getenv('HR_PHONE_NUMBER')
 
 # Load trained model and vectorizer
 try:
